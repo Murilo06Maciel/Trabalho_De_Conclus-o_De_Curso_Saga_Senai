@@ -2,14 +2,40 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Padaria Sabor & Pão</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .card-img-top {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      object-fit: cover;
+    }
+    @media (max-width: 576px) {
+      .container {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      .card-title {
+        font-size: 1rem;
+      }
+      .card-body p {
+        font-size: 0.95rem;
+      }
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg">
-    <div class="container">
+  <div class="container-fluid">
       <a class="navbar-brand" href="#">Padaria Sabor & Pão</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -38,7 +64,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="card">
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Pão Francês">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" class="card-img-top img-fluid" alt="Pão Francês">
             <div class="card-body">
               <h5 class="card-title">Pão Francês</h5>
               <p class="card-text">Crocante por fora, macio por dentro. Perfeito para o café da manhã.</p>
@@ -48,7 +74,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Bolo de Fubá">
+            <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" class="card-img-top img-fluid" alt="Bolo de Fubá">
             <div class="card-body">
               <h5 class="card-title">Bolo de Fubá</h5>
               <p class="card-text">Tradicional e saboroso, feito com ingredientes frescos.</p>
@@ -58,7 +84,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="https://images.unsplash.com/photo-1464306076886-debede1a7c94?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Sonho">
+            <img src="https://images.unsplash.com/photo-1464306076886-debede1a7c94?auto=format&fit=crop&w=400&q=80" class="card-img-top img-fluid" alt="Sonho">
             <div class="card-body">
               <h5 class="card-title">Sonho</h5>
               <p class="card-text">Recheado com creme, uma delícia irresistível.</p>
