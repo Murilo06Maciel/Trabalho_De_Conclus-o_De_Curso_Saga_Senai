@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Padaria Sabor & Pão</title>
+  <!-- Removido botão do head, será inserido na navbar -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
@@ -35,7 +35,7 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
+    <div class="container-fluid">
       <a class="navbar-brand" href="#">Padaria Sabor & Pão</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -46,8 +46,10 @@
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
           <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
         </ul>
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto align-items-center">
           <li class="nav-item"><a class="nav-link" href="empresas.html">Empresas</a></li>
+    <!-- Removed button for accessibility -->
+  <button class="btn-font-size" id="btnAcessibilidade" title="Aumentar fonte" style="position: fixed; top: 16px; right: 16px; z-index: 999;">A+</button>
         </ul>
       </div>
     </div>
@@ -138,5 +140,16 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
+<script>
+  document.getElementById('btnAcessibilidade').onclick = function() {
+    const root = document.documentElement;
+    let current = parseFloat(getComputedStyle(root).getPropertyValue('--font-size-base')) || 1;
+    let heading = parseFloat(getComputedStyle(root).getPropertyValue('--font-size-heading')) || 2.5;
+    if (current < 1.5) {
+      root.style.setProperty('--font-size-base', (current + 0.15) + 'rem');
+      root.style.setProperty('--font-size-heading', (heading + 0.2) + 'rem');
+    }
+  };
+</script>
 </body>
 </html>
