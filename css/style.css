@@ -16,8 +16,9 @@ h1, h2, h3, h4, h5, h6 {
   background: #6c2eb7;
   color: #fff;
   border: none;
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
+  font-size: 1.6rem;
   border-radius: 50%;
   font-size: 1.2rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -26,6 +27,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn-font-size:hover {
   background: #4b1c7a;
+}
+
+.btn-contraste {
+  background: #222;
+  color: #fff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 112px;
+  right: 20px;
+  z-index: 999;
+}
+.btn-contraste:hover {
+  background: #ff0;
+  color: #222;
 }
 
 .navbar {
@@ -61,4 +86,18 @@ footer {
 
 #msg-sucesso {
   transition: opacity 0.5s;
+}
+
+.alto-contraste {
+  background: #000 !important;
+  color: #fff !important;
+}
+.alto-contraste .navbar,
+.alto-contraste .card,
+.alto-contraste .btn,
+.alto-contraste input,
+.alto-contraste textarea {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
 }
