@@ -1,6 +1,31 @@
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background-color: #f3e5a4;
+  background-color: #ffffff;
+  font-size: var(--font-size-base, 1rem);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: var(--font-size-heading, inherit);
+}
+
+.btn-font-size {
+  position: fixed;
+  right: 20px;
+  top: 56px;
+  z-index: 9999;
+  background: #6c2eb7;
+  color: #fff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-font-size:hover {
+  background: #4b1c7a;
 }
 
 .navbar {
