@@ -1,3 +1,87 @@
+.alto-contraste {
+  background: #222 !important;
+  color: #ffeb3b !important;
+}
+.alto-contraste .navbar,
+.alto-contraste .card,
+.alto-contraste .btn,
+.alto-contraste input,
+.alto-contraste textarea {
+  background: #222 !important;
+  color: #ffeb3b !important;
+  border-color: #ffeb3b !important;
+}
+.alto-contraste .btn-primary {
+  background: #ffeb3b !important;
+  color: #222 !important;
+  border-color: #ffeb3b !important;
+}
+.alto-contraste .btn-warning {
+  background: #fff !important;
+  color: #222 !important;
+  border-color: #ffeb3b !important;
+}
+.alto-contraste .bg-warning {
+  background: #222 !important;
+  color: #ffeb3b !important;
+}
+.alto-contraste .bg-dark {
+  background: #222 !important;
+  color: #ffeb3b !important;
+}
+.alto-contraste h1,
+.alto-contraste h2,
+.alto-contraste h3,
+.alto-contraste h4,
+.alto-contraste h5,
+.alto-contraste h6,
+.alto-contraste p,
+.alto-contraste label,
+.alto-contraste small,
+.alto-contraste .nav-link,
+.alto-contraste .card-title,
+.alto-contraste .card-text {
+  color: #ffeb3b !important;
+  text-shadow: 1px 1px 2px #000;
+}
+.alto-contraste .card {
+  border: 2px solid #ffeb3b !important;
+}
+.alto-contraste .btn {
+  font-weight: bold;
+  box-shadow: 0 2px 8px #ffeb3b44;
+}
+.alto-contraste {
+  background: #222 !important;
+  color: #ff0 !important;
+}
+.alto-contraste .navbar,
+.alto-contraste .card,
+.alto-contraste .btn,
+.alto-contraste input,
+.alto-contraste textarea {
+  background: #222 !important;
+  color: #ff0 !important;
+  border-color: #ff0 !important;
+}
+.alto-contraste .btn-primary {
+  background: #ff0 !important;
+  color: #222 !important;
+  border-color: #ff0 !important;
+}
+.alto-contraste .btn-warning {
+  background: #fff !important;
+  color: #222 !important;
+  border-color: #ff0 !important;
+}
+.alto-contraste .bg-warning {
+  background: #222 !important;
+  color: #ff0 !important;
+}
+.alto-contraste .bg-dark {
+  background: #222 !important;
+  color: #ff0 !important;
+}
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background-color: #ffffff;
@@ -16,8 +100,9 @@ h1, h2, h3, h4, h5, h6 {
   background: #6c2eb7;
   color: #fff;
   border: none;
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
+  font-size: 1.6rem;
   border-radius: 50%;
   font-size: 1.2rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -26,6 +111,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn-font-size:hover {
   background: #4b1c7a;
+}
+
+.btn-contraste {
+  background: #222;
+  color: #fff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 112px;
+  right: 20px;
+  z-index: 999;
+}
+.btn-contraste:hover {
+  background: #ff0;
+  color: #222;
 }
 
 .navbar {
@@ -61,4 +170,18 @@ footer {
 
 #msg-sucesso {
   transition: opacity 0.5s;
+}
+
+.alto-contraste {
+  background: #000 !important;
+  color: #fff !important;
+}
+.alto-contraste .navbar,
+.alto-contraste .card,
+.alto-contraste .btn,
+.alto-contraste input,
+.alto-contraste textarea {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
 }

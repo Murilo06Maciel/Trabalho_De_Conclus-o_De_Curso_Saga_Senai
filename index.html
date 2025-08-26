@@ -47,7 +47,8 @@
           <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
           <li class="nav-item"><a class="nav-link" href="empresas.html">Empresas</a></li>
     <!-- Removed button for accessibility -->
-  <br><button class="btn-font-size" id="btnAcessibilidade" title="Aumentar fonte" style="position: fixed; top: 16px; right: 16px; z-index: 999;">A+</button>
+  <br><button class="btn-font-size" id="btnAcessibilidade" title="Aumentar fonte" style="position: fixed; top: 56px; right: 20px; z-index: 999;">A+</button>
+  <button class="btn-contraste" id="btnContraste" title="Alto Contraste" style="position: fixed; top: 130px; right: 20px; z-index: 999;">☀️</button>
         </ul>
       </div>
     </div>
@@ -148,6 +149,24 @@
       root.style.setProperty('--font-size-heading', (heading + 0.2) + 'rem');
     }
   };
+  document.getElementById('btnContraste').onclick = function() {
+    document.body.classList.toggle('alto-contraste');
+  };
+</script>
+<script>
+  document.getElementById('btnAcessibilidade').onclick = function() {
+    const root = document.documentElement;
+    let current = parseFloat(getComputedStyle(root).getPropertyValue('--font-size-base')) || 1;
+    let heading = parseFloat(getComputedStyle(root).getPropertyValue('--font-size-heading')) || 2.5;
+    if (current < 1.5) {
+      root.style.setProperty('--font-size-base', (current + 0.15) + 'rem');
+      root.style.setProperty('--font-size-heading', (heading + 0.2) + 'rem');
+    }
+  };
+          // JS do botão de alto contraste
+          document.getElementById('btnContraste').onclick = function() {
+            document.body.classList.toggle('alto-contraste');
+          };
 </script>
 </body>
 </html>
