@@ -1,8 +1,109 @@
+/* Alto contraste: container do header */
+.alto-contraste header .container {
+  background: #000000 !important;
+  color: #f8f8f8 !important;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #ffe600a8;
+}
+/* Alto contraste: card principal */
+.alto-contraste .card {
+  /* Fundo do card mais escuro */
+  background: #111 !important;
+  /* Texto amarelo para destaque */
+  color: #ffeb3b !important;
+  /* Borda amarela para destacar o card */
+  border: 2px solid #ffeb3b !important;
+}
+/* Alto contraste: área interna do card */
+.alto-contraste .card-body {
+  /* Fundo escuro e texto amarelo */
+  background: #111 !important;
+  color: #ffeb3b !important;
+}
+/* Alto contraste: campos de formulário */
+.alto-contraste input,
+.alto-contraste textarea {
+  /* Fundo escuro nos inputs */
+  background: #222 !important;
+  /* Texto branco para máxima legibilidade */
+  color: #fff !important;
+  /* Borda amarela para destacar campo */
+  border: 2px solid #ffeb3b !important;
+}
+/* Alto contraste: botões principais */
+.alto-contraste .btn-warning,
+.alto-contraste .btn-primary {
+  /* Fundo amarelo nos botões */
+  background: #ffeb3b !important;
+  /* Texto preto nos botões */
+  color: #222 !important;
+  /* Borda branca para destacar botão */
+  border: 2px solid #fff !important;
+  /* Negrito para acessibilidade */
+  font-weight: bold;
+  /* Sombra amarela para destaque */
+  box-shadow: 0 2px 8px #ffeb3b44;
+}
+/* Alto contraste: todos os botões */
+.alto-contraste .btn {
+  /* Fundo amarelo e texto preto */
+  background: #ffeb3b !important;
+  color: #222 !important;
+  border: 2px solid #fff !important;
+  font-weight: bold;
+}
+/* Alto contraste: navbar */
+.alto-contraste .navbar {
+  background: #fff !important;
+  color: #222 !important;
+}
+.alto-contraste .navbar .nav-link,
+.alto-contraste .navbar-brand {
+  color: #222 !important;
+  font-weight: bold;
+  text-shadow: none !important;
+}
+/* Alto contraste: links e marca da navbar */
+.alto-contraste .navbar .nav-link,
+.alto-contraste .navbar-brand {
+  /* Texto preto, negrito, sem sombra */
+  color: #222 !important;
+  font-weight: bold;
+  text-shadow: none !important;
+}
+/* Alto contraste: textos gerais */
+.alto-contraste h1,
+.alto-contraste h2,
+.alto-contraste h3,
+.alto-contraste h4,
+.alto-contraste h5,
+.alto-contraste h6,
+.alto-contraste p,
+.alto-contraste label,
+.alto-contraste small,
+.alto-contraste .nav-link,
+.alto-contraste .card-title,
+.alto-contraste .card-text {
+  /* Texto amarelo com sombra preta para destaque */
+  color: #ffeb3b !important;
+  text-shadow: 1px 1px 2px #000;
+}
+/* Alto contraste: fundo de seções de destaque */
+.alto-contraste .bg-warning {
+  /* Fundo escuro e texto amarelo */
+  background: #222 !important;
+  color: #ffeb3b !important;
+}
+/* Alto contraste: rodapé */
+.alto-contraste .bg-dark {
+  /* Fundo escuro e texto amarelo */
+  background: #111 !important;
+  color: #ffeb3b !important;
+}
 .alto-contraste {
   background: #222 !important;
   color: #ffeb3b !important;
 }
-.alto-contraste .navbar,
 .alto-contraste .card,
 .alto-contraste .btn,
 .alto-contraste input,
@@ -54,15 +155,6 @@
 .alto-contraste {
   background: #222 !important;
   color: #ff0 !important;
-}
-.alto-contraste .navbar,
-.alto-contraste .card,
-.alto-contraste .btn,
-.alto-contraste input,
-.alto-contraste textarea {
-  background: #222 !important;
-  color: #ff0 !important;
-  border-color: #ff0 !important;
 }
 .alto-contraste .btn-primary {
   background: #ff0 !important;
@@ -176,12 +268,11 @@ footer {
   background: #000 !important;
   color: #fff !important;
 }
-.alto-contraste .navbar,
 .alto-contraste .card,
 .alto-contraste .btn,
 .alto-contraste input,
 .alto-contraste textarea {
-  background: #000 !important;
-  color: #fff !important;
-  border-color: #fff !important;
+  background: #222 !important;
+  color: #ffeb3b !important;
+  border-color: #ffeb3b !important;
 }
