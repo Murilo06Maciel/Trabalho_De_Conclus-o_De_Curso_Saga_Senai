@@ -141,13 +141,21 @@
   <script src="js/script.js"></script>
 <script>
   document.getElementById('btnAcessibilidade').onclick = function() {
-    const root = document.documentElement;
-    let current = parseFloat(getComputedStyle(root).getPropertyValue('--font-size-base')) || 1;
-    let heading = parseFloat(getComputedStyle(root).getPropertyValue('--font-size-heading')) || 2.5;
-    if (current < 1.5) {
-      root.style.setProperty('--font-size-base', (current + 0.15) + 'rem');
-      root.style.setProperty('--font-size-heading', (heading + 0.2) + 'rem');
-    }
+          const root = document.documentElement;
+          let current = parseFloat(getComputedStyle(root).getPropertyValue('--font-size-base')) || 1;
+          let heading = parseFloat(getComputedStyle(root).getPropertyValue('--font-size-heading')) || 2.5;
+          let cardPadding = parseFloat(getComputedStyle(root).getPropertyValue('--card-padding')) || 1;
+          let cardTitleSize = parseFloat(getComputedStyle(root).getPropertyValue('--card-title-size')) || 1.25;
+          let btnSize = parseFloat(getComputedStyle(root).getPropertyValue('--btn-size')) || 1;
+          let containerPadding = parseFloat(getComputedStyle(root).getPropertyValue('--container-padding')) || 2;
+          if (current < 1.5) {
+            root.style.setProperty('--font-size-base', (current + 0.15) + 'rem');
+            root.style.setProperty('--font-size-heading', (heading + 0.2) + 'rem');
+            root.style.setProperty('--card-padding', (cardPadding + 0.2) + 'rem');
+            root.style.setProperty('--card-title-size', (cardTitleSize + 0.15) + 'rem');
+            root.style.setProperty('--btn-size', (btnSize + 0.15) + 'rem');
+            root.style.setProperty('--container-padding', (containerPadding + 0.3) + 'rem');
+          }
   };
   document.getElementById('btnContraste').onclick = function() {
     document.body.classList.toggle('alto-contraste');
