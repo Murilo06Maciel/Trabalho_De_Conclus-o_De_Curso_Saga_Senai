@@ -18,18 +18,7 @@
         padding-left: 8px;
         padding-right: 8px;
       }
-      h1 {
-        font-size: 1.5rem;
-      }
-      .card-title {
-        font-size: 1rem;
-      }
-      .card-body p {
-        font-size: 0.95rem;
-      }
-      .navbar-brand {
-        font-size: 1.1rem;
-      }
+      /* Removido font-size fixo para h1, card-title, card-body p e navbar-brand para permitir ajuste via variáveis CSS */
     }
   </style>
 </head>
@@ -47,7 +36,9 @@
           <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
           <li class="nav-item"><a class="nav-link" href="empresas.html">Empresas</a></li>
     <!-- Removed button for accessibility -->
-  <br><button class="btn-font-size" id="btnAcessibilidade" title="Aumentar fonte" style="position: fixed; top: 56px; right: 20px; z-index: 999;">A+</button>
+  <br>
+  <button class="btn-font-size" id="btnAcessibilidade" title="Aumentar fonte" style="position: fixed; top: 56px; right: 70px; z-index: 999;">A+</button>
+  <button class="btn-font-size" id="btnDiminuirFonte" title="Diminuir fonte" style="position: fixed; top: 56px; right: 20px; z-index: 999;">A-</button>
   <button class="btn-contraste" id="btnContraste" title="Alto Contraste" style="position: fixed; top: 130px; right: 20px; z-index: 999;">☀️</button>
         </ul>
       </div>
@@ -165,21 +156,31 @@
 </script>
 <script>
   document.getElementById('btnAcessibilidade').onclick = function() {
-          const root = document.documentElement;
-          let current = parseFloat(getComputedStyle(root).getPropertyValue('--font-size-base')) || 1;
-          let heading = parseFloat(getComputedStyle(root).getPropertyValue('--font-size-heading')) || 2.5;
-          let cardPadding = parseFloat(getComputedStyle(root).getPropertyValue('--card-padding')) || 1;
-          let cardTitleSize = parseFloat(getComputedStyle(root).getPropertyValue('--card-title-size')) || 1.25;
-          let btnSize = parseFloat(getComputedStyle(root).getPropertyValue('--btn-size')) || 1;
-          let containerPadding = parseFloat(getComputedStyle(root).getPropertyValue('--container-padding')) || 2;
-          if (current < 1.5) {
-            root.style.setProperty('--font-size-base', (current + 0.15) + 'rem');
-            root.style.setProperty('--font-size-heading', (heading + 0.2) + 'rem');
-            root.style.setProperty('--card-padding', (cardPadding + 0.2) + 'rem');
-            root.style.setProperty('--card-title-size', (cardTitleSize + 0.15) + 'rem');
-            root.style.setProperty('--btn-size', (btnSize + 0.15) + 'rem');
-            root.style.setProperty('--container-padding', (containerPadding + 0.3) + 'rem');
-          }
+    const root = document.documentElement;
+    let current = parseFloat(getComputedStyle(root).getPropertyValue('--font-size-base')) || 1;
+    let heading = parseFloat(getComputedStyle(root).getPropertyValue('--font-size-heading')) || 2.5;
+    let cardPadding = parseFloat(getComputedStyle(root).getPropertyValue('--card-padding')) || 1;
+    let cardTitleSize = parseFloat(getComputedStyle(root).getPropertyValue('--card-title-size')) || 1.25;
+    let btnSize = parseFloat(getComputedStyle(root).getPropertyValue('--btn-size')) || 1;
+    let containerPadding = parseFloat(getComputedStyle(root).getPropertyValue('--container-padding')) || 2;
+    if (current < 1.5) {
+      root.style.setProperty('--font-size-base', (current + 0.15) + 'rem');
+      root.style.setProperty('--font-size-heading', (heading + 0.2) + 'rem');
+      root.style.setProperty('--card-padding', (cardPadding + 0.2) + 'rem');
+      root.style.setProperty('--card-title-size', (cardTitleSize + 0.15) + 'rem');
+      root.style.setProperty('--btn-size', (btnSize + 0.15) + 'rem');
+      root.style.setProperty('--container-padding', (containerPadding + 0.3) + 'rem');
+    }
+  };
+
+  document.getElementById('btnDiminuirFonte').onclick = function() {
+    const root = document.documentElement;
+    root.style.setProperty('--font-size-base', '1rem');
+    root.style.setProperty('--font-size-heading', '2.5rem');
+    root.style.setProperty('--card-padding', '1rem');
+    root.style.setProperty('--card-title-size', '1.25rem');
+    root.style.setProperty('--btn-size', '1rem');
+    root.style.setProperty('--container-padding', '2rem');
   };
   document.getElementById('btnContraste').onclick = function() {
     document.body.classList.toggle('alto-contraste');
